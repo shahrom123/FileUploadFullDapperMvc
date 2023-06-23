@@ -1,0 +1,33 @@
+﻿@model AddQuoteDto
+
+<form method="post" enctype="multipart/form-data" class="row g-3 needs-validation" novalidate>
+  <div class="col-md-6">
+    <label for="validationCustom01" class="form-label">Author</label>
+    <input asp-for="Author" type="text" class="form-control" id="validationCustom01" placeholder="Author" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-6">
+    <label for="validationCustom02" class="form-label">Category Id</label>
+        <input asp-for="CategoryId" type="number" class="form-control" id="validationCustom02" placeholder="Category Id" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+    <div class="col-md-12">
+        <label for="validationCustom02" class="form-label">Text</label>
+        <textarea asp-for="QuoteText" type="text" class="form-control" id="validationCustom03" placeholder="some text" required></textarea>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div>
+    <div class="col-md-12">
+        <input asp-for="File" type="file" class="form-control" id="inputgroupFile" /> 
+    </div>
+ 
+
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </div>
+</form>

@@ -1,0 +1,18 @@
+﻿@model List<GetQuoteDto>
+
+ <a class="m-3 btn btn-primary" href="/quote/create" role="button">New quote</a>
+<h1 class=" text-center">The List of quotes</h1>
+
+     @foreach(var quote in Model)
+        {
+            <tr>
+                <th scope="row">@quote.Id</th> 
+                <td>@quote.Author</td>
+                <td>@quote.QuoteText</td>
+                <td>@quote.CategoryId</td>
+                <td><img width="50px" height="50px"  src="~/images/@quote.FileName" alt="no image" /></td>
+                <td><button class="btn btn-outline-secondary" type="button" id="button-addon1"><a href="/quote/update/@quote.Id">Edit</a></button> </td>
+
+                <td> <a href="/quote/DeleteQuote/@quote.Id">delete</a></td>   
+            </tr>
+        }
